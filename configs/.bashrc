@@ -10,7 +10,6 @@ function ? () { awk "BEGIN{ print $* }" ;}
 alias gitpullsh='git pull && echo "------------------------" && git push'
 alias mycomms='git logn | grep -i **edit here** | grep -i -v merge | less'
 alias ls='ls -1 --color=auto'
-alias gitpullsh='git pull && echo "------------------------" && git push'
 
 bind '"\t":menu-complete'
 shopt -s extglob
