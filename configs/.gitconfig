@@ -7,7 +7,7 @@
     autocrlf = false
 #   excludesfile = **edit here**/.gitignore_global
 [alias]
-    logn = log --pretty=format:'%C(bold yellow)%h%C(reset) %C(bold magenta)(%cd)%C(reset) %C(bold green)%d%Creset %s %C(bold cyan)<%ae>%Creset' --abbrev-commit --date=iso --bracnhes
+    logn = log --pretty=format:'%C(bold yellow)%h%C(reset) %C(bold magenta)(%cd)%C(reset) %C(bold green)%d%Creset %s %C(bold cyan)<%ae>%Creset' --abbrev-commit --date=iso --branches
     lola = log --graph --pretty=format:'%C(bold yellow)%h%C(reset) %C(bold magenta)(%cd)%C(reset) %C(bold green)%d%Creset %s' --abbrev-commit --date=iso --branches
     ls = ls-tree HEAD --name-only
     st = status -s
