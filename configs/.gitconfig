@@ -9,7 +9,7 @@
 [alias]
     logn = log --pretty=format:'%C(bold yellow)%h%C(reset) %C(bold magenta)(%cd)%C(reset) %C(bold green)%d%Creset %s %C(bold cyan)<%ae>%Creset' --abbrev-commit --date=iso --branches
     lola = log --graph --pretty=format:'%C(bold yellow)%h%C(reset) %C(bold magenta)(%cd)%C(reset) %C(bold green)%d%Creset %s' --abbrev-commit --date=iso --branches
-    ls = ls-tree HEAD --name-only
+    lstree = ls-tree HEAD --name-only
     st = status -s
     stu = status -s --untracked-files=no
     showcomm = show --pretty=\"format:\" --name-only
@@ -17,12 +17,9 @@
     lolan = log --graph --pretty=format:'%C(bold yellow)%h%C(reset) %C(bold magenta)(%cd)%C(reset) %C(bold green)%d%Creset %s %C(blue)<%ae>%Creset' --abbrev-commit --date=iso --branches
     ignored = !git ls-files -v | grep "^[[:lower:]]"
     mydiff = diff --ignore-space-change --ignore-space-at-eol
-    filesinbranch = "!git log --pretty=format:'%h' `git rev-parse --abbrev-ref HEAD`.. | while read commit; do git show --pretty='format:' --name-only $commit; done | perl -ne 'print unless $a{$_}++'"
 [merge]
     tool = kdiff3NoAuto
     conflictstyle = diff3
-[mergetool "tortoise"]
-    path = tortoisemerge.exe
 [mergetool "kdiff3"]
     path = C:/Program\\ Files\\ \\(x86\\)/KDiff3/kdiff3.exe
 [diff]
@@ -35,4 +32,5 @@
     default = simple
 [mergetool "kdiff3NoAuto"]
     cmd = C:/Program\\ Files\\ \\(x86\\)/KDiff3/kdiff3.exe --L1 \"$MERGED (Base)\" --L2 \"$MERGED (Local)\" --L3 \"$MERGED (Remote)\" -o \"$MERGED\" \"$BASE\" \"$LOCAL\" \"$REMOTE\"
-
+[url "https://"]
+    insteadOf = git://

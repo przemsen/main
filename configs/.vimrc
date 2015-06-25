@@ -21,3 +21,6 @@ set incsearch
 set nowrap " bez lamania linii
 set cmdheight=2
 set listchars=eol:$,tab:>-,trail:~,extends:>,precedes:<
+
+map ,hc :s/^/<!--/g<CR>:s/$/-->/g<CR>:let @/ = ""<CR>
+map ,huc :s/<!--//g<CR>:s/-->//g<CR>:let @/ = ""<CR>
