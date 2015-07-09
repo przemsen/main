@@ -11,7 +11,7 @@ Main repository
 
 | Misc/              | Desc.
 | -------------------|--------
-| [`assemblyfqn.cmd`](https://github.com/przemsen/main/blob/master/misc/assemblyfqn.cmd.cmd) | Prints fully qualified name of an .NET assembly (including public key token etc.) by dragging onto it
+| [`assemblyfqn.cmd`](https://github.com/przemsen/main/blob/master/misc/assemblyfqn.cmd) | Prints fully qualified name of an .NET assembly (including public key token etc.) by dragging onto it
 | [`BOMfixer.ashx`](https://github.com/przemsen/main/blob/master/misc/code/BOMfixer.ashx) | Proxy utility that removes BOM sequence from HTTP content
 | [`code`](https://github.com/przemsen/main/blob/master/misc/code) | Put this file in `bin` folder of [Visual Studio Code](https://www.visualstudio.com/en-us/products/code-vs.aspx) to be able to run it from Git Bash in Windows | 
 | [`concatlines.pl`](https://github.com/przemsen/main/blob/master/misc/concatlines.pl) | Merge lines of files
