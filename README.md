@@ -16,6 +16,8 @@ Main repository
 | [`code`](https://github.com/przemsen/main/blob/master/misc/code) | Put this file in `bin` folder of [Visual Studio Code](https://www.visualstudio.com/en-us/products/code-vs.aspx) to be able to run it from Git Bash in Windows | 
 | [`concatlines.pl`](https://github.com/przemsen/main/blob/master/misc/concatlines.pl) | Merge lines of files
 | [`managesites.ps1`](https://github.com/przemsen/main/blob/master/misc/managesites.ps1) | Delete redundant site entries from IIS Express configuration
+| [`mkguid.cmd`](https://github.com/przemsen/main/blob/master/misc/mkguid.cmd) | Generates new GUID |
 | [`run_apppool.vbs`](https://github.com/przemsen/main/blob/master/misc/run_apppool.vbs) | Runs default CLR 4 IIS Express application pool without commandline window |
+| [`sigcheck-v.cmd`](https://github.com/przemsen/main/blob/master/misc/sigcheck-v.cmd) | Runs Sysinternals Sigcheck and instructs it to perform VirusTotal check upon hash of a file being dragged over as an argument |
 
 
