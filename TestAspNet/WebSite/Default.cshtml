@@ -1,0 +1,23 @@
+﻿@using System.Data.SqlClient
+@using System.Data
+@using System.Configuration
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <title></title>
+    </head>
+    <body>
+        @using (var conn = new SqlConnection(ConfigurationManager.ConnectionStrings["A"].ConnectionString))
+        {
+            conn.Open();
+            SqlCommand cmd = new SqlCommand("SELECT * FROM Data", conn);
+            SqlDataReader rdr = cmd.ExecuteReader(CommandBehavior.CloseConnection);
+
+            while (rdr.Read())
+            {
+                <p>@rdr[0] @rdr[1]</p>
+            }
+        }
+    </body>
+</html>
