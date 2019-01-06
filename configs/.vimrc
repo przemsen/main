@@ -25,6 +25,9 @@ set listchars=eol:$,tab:>-,trail:~,extends:>,precedes:<
 map ,hc :s/^/<!--/g<CR>:s/$/-->/g<CR>:let @/ = ""<CR>
 map ,huc :s/<!--//g<CR>:s/-->//g<CR>:let @/ = ""<CR>
 
+" Backslash d is d without copy
+nnoremap <leader>d "_d
+
 " Assuming typescript syntax file is present in the install dir
 " https://raw.githubusercontent.com/leafgarland/typescript-vim/master/syntax/typescript.vim
 " autocmd BufNewFile,BufRead *.ts setlocal filetype=typescript
