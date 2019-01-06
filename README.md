@@ -6,7 +6,7 @@ Main repository
 | [`.bashrc`](https://github.com/przemsen/main/blob/master/configs/.bashrc) | Bash configuration
 | [`.gitconfig`](https://github.com/przemsen/main/blob/master/configs/.gitconfig) | GIT configuration
 | [`.vimrc`](https://github.com/przemsen/main/blob/master/configs/.vimrc) | VIM configuration 
-| [`conemu.xml`](https://github.com/przemsen/main/blob/master/configs/git-prompt.sh) | Modified, shorter PS1 for Git Bash for Windows 
+| [`git-prompt.sh`](https://github.com/przemsen/main/blob/master/configs/git-prompt.sh) | Modified, shorter PS1 for Git Bash for Windows 
 
 
 | Misc/              | Desc.
