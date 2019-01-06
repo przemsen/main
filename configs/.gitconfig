@@ -4,33 +4,31 @@
     email = **edit here**
 [core]
     editor = vim
-    autocrlf = false
-#   excludesfile = **edit here**/.gitignore_global
+    autocrlf = true
 [alias]
-    logn = log --pretty=format:'%C(bold yellow)%h%C(reset) %C(bold magenta)(%cd)%C(reset) %C(bold green)%d%Creset %s %C(bold cyan)<%ae>%Creset' --abbrev-commit --date=iso --branches
-    lola = log --graph --pretty=format:'%C(bold yellow)%h%C(reset) %C(bold magenta)(%cd)%C(reset) %C(bold green)%d%Creset %s' --abbrev-commit --date=iso --branches
-    lstree = ls-tree HEAD --name-only
+    logf  = log --pretty=format:'%C(bold yellow)%h%C(reset) %C(bold magenta)(%cd)%C(reset) %C(bold green)%d%Creset %s %C(bold cyan)<%ae>%Creset' --abbrev-commit --date=iso 
+    logfa = log --pretty=format:'%C(bold yellow)%h%C(reset) %C(bold magenta)(%cd)%C(reset) %C(bold green)%d%Creset %s %C(bold cyan)<%ae>%Creset' --abbrev-commit --date=iso --branches
+    logg  = log --graph --pretty=format:'%C(bold yellow)%h%C(reset) %C(bold magenta)(%cd)%C(reset) %C(bold green)%d%Creset %s %C(bold cyan)<%ae>%Creset' --abbrev-commit --date=iso --branches
     st = status -s
-    stu = status -s --untracked-files=no
+    stu = status -s --untracked-files=all
     showcomm = show --pretty=\"format:\" --name-only
-    pullra = pull --rebase --all
-    lolan = log --graph --pretty=format:'%C(bold yellow)%h%C(reset) %C(bold magenta)(%cd)%C(reset) %C(bold green)%d%Creset %s %C(blue)<%ae>%Creset' --abbrev-commit --date=iso --branches
-    ignored = !git ls-files -v | grep "^[[:lower:]]"
+    pullra = pull --rebase --all   
+    ignored = !git ls-files -v | grep '^S'
     mydiff = diff --ignore-space-change --ignore-space-at-eol
+    showtree = ls-tree -r --name-only
+    uisw = update-index --skip-worktree
+    uinsw = update-index --no-skip-worktree
 [merge]
     tool = kdiff3NoAuto
     conflictstyle = diff3
-[mergetool "kdiff3"]
-    path = C:/Program\\ Files\\ \\(x86\\)/KDiff3/kdiff3.exe
 [diff]
     guitool = kdiff3
 [difftool "kdiff3"]
     path = C:/Program Files (x86)/KDiff3/kdiff3.exe
-[credential]
-    helper = !\"C:\\Program Files (x86)\\GitExtensions\\GitCredentialWinStore\\git-credential-winstore.exe\"
 [push]
     default = simple
 [mergetool "kdiff3NoAuto"]
     cmd = C:/Program\\ Files\\ \\(x86\\)/KDiff3/kdiff3.exe --L1 \"$MERGED (Base)\" --L2 \"$MERGED (Local)\" --L3 \"$MERGED (Remote)\" -o \"$MERGED\" \"$BASE\" \"$LOCAL\" \"$REMOTE\"
-[url "https://"]
-    insteadOf = git://
+    trustExitCode = false
+[rerere]
+    enabled = 0 
