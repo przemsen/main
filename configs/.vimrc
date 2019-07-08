@@ -28,6 +28,12 @@ map ,huc :s/<!--//g<CR>:s/-->//g<CR>:let @/ = ""<CR>
 " Backslash d is d without copy
 nnoremap <leader>d "_d
 
+" Set block cursor
+let &t_ti.="\e[1 q"
+let &t_SI.="\e[5 q"
+let &t_EI.="\e[1 q"
+let &t_te.="\e[0 q"
+
 " Assuming typescript syntax file is present in the install dir
 " https://raw.githubusercontent.com/leafgarland/typescript-vim/master/syntax/typescript.vim
 " autocmd BufNewFile,BufRead *.ts setlocal filetype=typescript

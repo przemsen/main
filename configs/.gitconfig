@@ -5,6 +5,7 @@
 [core]
     editor = vim
     autocrlf = true
+    #excludesfile = **edit here**
 [alias]
     logf  = log --pretty=format:'%C(bold yellow)%h%C(reset) %C(bold magenta)(%cd)%C(reset) %C(bold green)%d%Creset %s %C(bold cyan)<%ae>%Creset' --abbrev-commit --date=iso 
     logfa = log --pretty=format:'%C(bold yellow)%h%C(reset) %C(bold magenta)(%cd)%C(reset) %C(bold green)%d%Creset %s %C(bold cyan)<%ae>%Creset' --abbrev-commit --date=iso --branches
@@ -13,7 +14,7 @@
     stu = status -s --untracked-files=all
     showcomm = show --pretty=\"format:\" --name-only
     pullra = pull --rebase --all   
-    ignored = !git ls-files -v | grep '^S'
+    ignored = !git ls-files -v | egrep '^S|^h'
     mydiff = diff --ignore-space-change --ignore-space-at-eol
     showtree = ls-tree -r --name-only
     uisw = update-index --skip-worktree
