@@ -2,10 +2,14 @@
     name = **edit here**
     mail = **edit here**
     email = **edit here**
+
 [core]
     editor = vim
     autocrlf = true
+    filemode = false
     #excludesfile = **edit here**
+    pager = tr -d '\\r' | less -RX --chop-long-lines
+    
 [alias]
     logf  = log --pretty=format:'%C(bold yellow)%h%C(reset) %C(bold magenta)(%cd)%C(reset) %C(bold green)%d%Creset %s %C(bold cyan)<%ae>%Creset' --abbrev-commit --date=iso 
     logfa = log --pretty=format:'%C(bold yellow)%h%C(reset) %C(bold magenta)(%cd)%C(reset) %C(bold green)%d%Creset %s %C(bold cyan)<%ae>%Creset' --abbrev-commit --date=iso --branches
@@ -19,17 +23,24 @@
     showtree = ls-tree -r --name-only
     uisw = update-index --skip-worktree
     uinsw = update-index --no-skip-worktree
+    staash = stash --include-untracked
+    
 [merge]
     tool = kdiff3NoAuto
     conflictstyle = diff3
+    
 [diff]
     guitool = kdiff3
+    
 [difftool "kdiff3"]
     path = C:/Program Files (x86)/KDiff3/kdiff3.exe
+
 [push]
     default = simple
+
 [mergetool "kdiff3NoAuto"]
     cmd = C:/Program\\ Files\\ \\(x86\\)/KDiff3/kdiff3.exe --L1 \"$MERGED (Base)\" --L2 \"$MERGED (Local)\" --L3 \"$MERGED (Remote)\" -o \"$MERGED\" \"$BASE\" \"$LOCAL\" \"$REMOTE\"
     trustExitCode = false
+
 [rerere]
     enabled = 0 
