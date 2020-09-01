@@ -15,7 +15,9 @@ function fs() { echo -n $1 | sed 's/\\/\//g' }
 
 alias ls='ls -1 --color=auto'
 bind '"\t":menu-complete'
+
 shopt -s extglob
+shopt -s histappend
 
 # Invocation of z.sh copied e.g. to HOME
 # https://github.com/rupa/z/blob/master/z.sh

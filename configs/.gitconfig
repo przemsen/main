@@ -8,7 +8,7 @@
     autocrlf = true
     filemode = false
     #excludesfile = **edit here**
-    pager = tr -d '\\r' | less -RX --chop-long-lines
+    pager = tr -d '\\r' | less -FXRS -x4
     
 [alias]
     logf  = log --pretty=format:'%C(bold yellow)%h%C(reset) %C(bold magenta)(%cd)%C(reset) %C(bold green)%d%Creset %s %C(bold cyan)<%ae>%Creset' --abbrev-commit --date=iso 
