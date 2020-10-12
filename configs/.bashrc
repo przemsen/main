@@ -18,6 +18,7 @@ bind '"\t":menu-complete'
 
 shopt -s extglob
 shopt -s histappend
+shopt -s nocaseglob
 
 # Invocation of z.sh copied e.g. to HOME
 # https://github.com/rupa/z/blob/master/z.sh

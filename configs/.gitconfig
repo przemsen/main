@@ -8,6 +8,7 @@
     autocrlf = true
     filemode = false
     #excludesfile = **edit here**
+    #less -FRX --chop-long-lines -- newest
     pager = tr -d '\\r' | less -FXRS -x4
     
 [alias]
