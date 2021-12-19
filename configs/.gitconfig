@@ -8,9 +8,14 @@
     autocrlf = true
     filemode = false
     #excludesfile = **edit here**
-    #less -FRX --chop-long-lines -- newest
-    pager = tr -d '\\r' | less -FXRS -x4
+    #less -FXRS -x4
+    pager = tr -d '\\r' | less -FRX --chop-long-lines
+    longpaths = true
     
+#[http]
+    #sslcainfo=C:/Program Files/Git/mingw64/ssl/certs/ca-bundle.crt
+    #sslbackend=schannel
+
 [alias]
     logf  = log --pretty=format:'%C(bold yellow)%h%C(reset) %C(bold magenta)(%cd)%C(reset) %C(bold green)%d%Creset %s %C(bold cyan)<%ae>%Creset' --abbrev-commit --date=iso 
     logfa = log --pretty=format:'%C(bold yellow)%h%C(reset) %C(bold magenta)(%cd)%C(reset) %C(bold green)%d%Creset %s %C(bold cyan)<%ae>%Creset' --abbrev-commit --date=iso --branches
@@ -24,23 +29,27 @@
     showtree = ls-tree -r --name-only
     uisw = update-index --skip-worktree
     uinsw = update-index --no-skip-worktree
+    uiau = update-index --assume-unchanged
+    uinau = update-index --no-assume-unchanged
     staash = stash --include-untracked
-    
+    cloner = clone --recurse-submodules -j8
+    sui = submodule update --init
+
 [merge]
     tool = kdiff3NoAuto
     conflictstyle = diff3
-    
+
 [diff]
     guitool = kdiff3
-    
+
 [difftool "kdiff3"]
-    path = C:/Program Files (x86)/KDiff3/kdiff3.exe
+    path = C:/Program Files/KDiff3/kdiff3.exe
 
 [push]
     default = simple
 
 [mergetool "kdiff3NoAuto"]
-    cmd = C:/Program\\ Files\\ \\(x86\\)/KDiff3/kdiff3.exe --L1 \"$MERGED (Base)\" --L2 \"$MERGED (Local)\" --L3 \"$MERGED (Remote)\" -o \"$MERGED\" \"$BASE\" \"$LOCAL\" \"$REMOTE\"
+    cmd = C:/Program\\ Files/KDiff3/kdiff3.exe --L1 \"$MERGED (Base)\" --L2 \"$MERGED (Local)\" --L3 \"$MERGED (Remote)\" -o \"$MERGED\" \"$BASE\" \"$LOCAL\" \"$REMOTE\"
     trustExitCode = false
 
 [rerere]
