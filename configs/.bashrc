@@ -14,7 +14,7 @@ function cdg() { ls -d */ | grep -i "$1" | awk "{printf(\"%d : %s\n\", NR, \$0)}
 function fs() { echo -n $1 | sed 's/\\/\//g' }
 # set -o xtrace; set +o xtrace;
 function commit() { git commit -m "`tail -1 ~/TASKS | awk -F ', ' '{print $1;}'` $1"; }
-function newtask() { echo ", `date "+%Y-%m-%d %H:%M"`" >> ~/TASKS; echo -n "$1" >> ~/TASKS; } 
+function newtask() { echo "$1, `date "+%Y-%m-%d %H:%M"`" >> ~/TASKS; } 
 
 alias ls='ls -1 --color=auto'
 

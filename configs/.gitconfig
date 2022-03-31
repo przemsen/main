@@ -34,6 +34,7 @@
     staash = stash --include-untracked
     cloner = clone --recurse-submodules -j8
     sui = submodule update --init
+    topten = !git log --pretty=format: --name-only | grep -E '\\.cs$' | sort | uniq -c | sort -rg | head -10
 
 [merge]
     tool = kdiff3NoAuto
