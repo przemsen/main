@@ -9,7 +9,7 @@
     filemode = false
     #excludesfile = **edit here**
     #less -FXRS -x4
-    pager = tr -d '\\r' | less -FRX --chop-long-lines
+    pager = diff-so-fancy | tr -d '\\r' | less -FRX --chop-long-lines
     longpaths = true
     
 #[http]
@@ -54,4 +54,8 @@
     trustExitCode = false
 
 [rerere]
-    enabled = 0 
+    enabled = 0
+    
+
+[interactive]
+    diffFilter = diff-so-fancy --patch
