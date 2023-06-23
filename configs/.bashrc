@@ -1,5 +1,5 @@
 # Under linux
-export PS1='\[\033[01;32m\]\u@\h\[\033[37m\]:\[\033[01;33m\]\w\[\033[00m\]$(__git_ps1 " [%s]")\n\$'
+# export PS1='\[\033[01;32m\]\u@\h\[\033[37m\]:\[\033[01;33m\]\w\[\033[00m\]$(__git_ps1 " [%s]")\n\$'
 
 PATH=$PATH:$HOME
 LS_COLORS="di=36;1:ln=37;1:ex=32;1"
@@ -7,15 +7,19 @@ export LS_COLORS
 export PATH
 export EDITOR=vim
 export TSC_WATCHFILE=UseFsEventsWithFallbackDynamicPolling
+
 # Quiet for WSL
 export LESS="$LESS -R -Q"
 
 function cdg() { ls -d */ | grep -i "$1" | awk "{printf(\"%d : %s\n\", NR, \$0)}"; read choice; if [ "$choice" == "0" ]; then : ; else cd "`ls -d */ | grep -i \"$1\" | awk \"NR==$choice\"`"; fi; }
 function fs() { echo -n $1 | sed 's/\\/\//g' }
+
 # set -o xtrace; set +o xtrace;
 function commit() { git commit -m "`tail -1 ~/TASKS | awk -F ', ' '{print $1;}'` $1"; }
 function newtask() { echo "$1, `date "+%Y-%m-%d %H:%M"`" >> ~/TASKS; } 
 
+alias deflauprof='jq -r '\''[.profiles | to_entries[] | select(.key != "IIS Express")][0].key'\'' ./Properties/launchSettings.json'
+alias mydotnetrun='dotnet run --launch-profile `deflauprof`'
 alias ls='ls -1 --color=auto'
 
 bind '"\t":menu-complete'
@@ -48,3 +52,5 @@ function ssa() {
   eval $(ssh-agent -s)    
   #ssh-add ~/.ssh/id_rsa-...
 }
+
+stty -ixon

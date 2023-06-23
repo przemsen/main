@@ -10,7 +10,8 @@
     #excludesfile = **edit here**
     #less -FXRS -x4
     pager = diff-so-fancy | tr -d '\\r' | less -FRX --chop-long-lines
-    longpaths = true
+    longpaths = true'
+    attributesfile = **edit here**
     
 #[http]
     #sslcainfo=C:/Program Files/Git/mingw64/ssl/certs/ca-bundle.crt
@@ -42,6 +43,9 @@
 
 [diff]
     guitool = kdiff3
+
+[diff "utf16"]
+    textconv = "iconv -f utf-16 -t utf-8"
 
 [difftool "kdiff3"]
     path = C:/Program Files/KDiff3/kdiff3.exe
